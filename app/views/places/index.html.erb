@@ -7,6 +7,10 @@
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
+    </br>
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture.url, class: 'place-photo' %>
+    <% end %>
 
     <% if place.comments.present? %>
       <div class="col-12">
